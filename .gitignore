@@ -1,0 +1,9 @@
+/build/
+/install/
+/log/
+/.vscode/
+**/__pycache__/
+*.py[cod]
+/frames_*.gv
+/frames_*.pdf
+
