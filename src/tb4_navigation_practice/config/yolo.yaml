@@ -1,0 +1,10 @@
+yolo_detector:
+  ros__parameters:
+    image_topic: /oakd/rgb/preview/image_raw
+    detections_topic: /yolo/detections/image
+    model: yolov8n.pt
+    device: cpu
+    confidence_threshold: 0.35
+    inference_rate_hz: 2.0
+    inference_threads: 2
+    show_window: false

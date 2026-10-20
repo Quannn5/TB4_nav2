@@ -24,6 +24,12 @@ ARGUMENTS = [
         choices=['true', 'false'],
         description='Use sim time.'
     ),
+    DeclareLaunchArgument(
+        'spawn_assignment_objects',
+        default_value='true',
+        choices=['true', 'false'],
+        description='Spawn static assignment props in Gazebo.',
+    ),
 ]
 
 
@@ -37,7 +43,13 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             [PathJoinSubstitution([pkg_tb4, 'launch', 'tb4_sim.launch.py'])]
         ),
-        launch_arguments=[('world', LaunchConfiguration('world'))],
+        launch_arguments=[
+            ('world', LaunchConfiguration('world')),
+            (
+                'spawn_assignment_objects',
+                LaunchConfiguration('spawn_assignment_objects'),
+            ),
+        ],
     )
 
     slam = IncludeLaunchDescription(

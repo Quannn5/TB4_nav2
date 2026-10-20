@@ -16,6 +16,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
         (os.path.join('share', package_name, 'maps'), glob('maps/*')),
+        (os.path.join('share', package_name, 'models'), glob('models/*.sdf')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,6 +26,10 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [],
+        'console_scripts': [
+            'waypoint_navigator = '
+            'tb4_navigation_practice.waypoint_navigator:main',
+            'yolo_detector = tb4_navigation_practice.yolo_detector:main',
+        ],
     },
 )

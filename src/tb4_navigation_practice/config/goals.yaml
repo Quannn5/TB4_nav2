@@ -1,0 +1,9 @@
+waypoint_navigator:
+  ros__parameters:
+    frame_id: map
+    # Coordinates captured from RViz Publish Point. Publish Point provides
+    # position only, so yaw is set to zero for each goal.
+    goals: [9.052786827, -0.947074354, 0.0,
+            8.895812988, -7.656434536, 0.0,
+            -7.061883450, -4.956677437, 0.0,
+            0.0, 0.0, 0.0]

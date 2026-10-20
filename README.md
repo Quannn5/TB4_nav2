@@ -75,4 +75,5 @@ navigation goals with **Nav2 Goal**. For a different map, pass
 - `/tf`, `/tf_static`: robot and localization transforms
 
 See [the package README](src/tb4_navigation_practice/README.md) for package
-details and launch file descriptions.
+details, launch file descriptions, and the waypoint-navigation and YOLO
+workflow.
